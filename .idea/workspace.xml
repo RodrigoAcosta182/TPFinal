@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c43458aa-26c5-4977-9b23-6c6032ef1c27" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1j7jPOxJH6laSkq1le0gjtOEY3D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\TPFinal" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\TPFinal" />
+      <recent name="C:\xampp\htdocs\TPFinal\recursos\css" />
+      <recent name="C:\xampp\htdocs\TPFinal\funciones" />
+      <recent name="C:\xampp\htdocs\TPFinal\recursos" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c43458aa-26c5-4977-9b23-6c6032ef1c27" name="Default Changelist" comment="" />
+      <created>1603162000086</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603162000086</updated>
+      <workItem from="1603162001145" duration="1703000" />
+      <workItem from="1603234149216" duration="8458000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="460" y="119" key="FileChooserDialogImpl" timestamp="1603163183559">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="119" key="FileChooserDialogImpl/0.0.1360.728/1360.-160.1920.1040@0.0.1360.728" timestamp="1603163183559" />
+    <state x="514" y="287" key="NewPhpFileDialog" timestamp="1603162783881">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="514" y="287" key="NewPhpFileDialog/0.0.1360.728/1360.-160.1920.1040@0.0.1360.728" timestamp="1603162783881" />
+    <state x="1572" y="-160" width="1004" height="715" maximized="true" key="dock-window-1" timestamp="1603163718898">
+      <screen x="1360" y="-160" width="1920" height="1040" />
+    </state>
+    <state x="1572" y="-160" width="1004" height="715" maximized="true" key="dock-window-1/0.0.1360.728/1360.-160.1920.1040@0.0.1360.728" timestamp="1603163718898" />
+    <state x="336" y="162" key="run.anything.popup" timestamp="1603162807496">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="336" y="162" key="run.anything.popup/0.0.1360.728/1360.-160.1920.1040@0.0.1360.728" timestamp="1603162807496" />
+  </component>
+</project>
