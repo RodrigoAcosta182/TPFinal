@@ -6,12 +6,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Acceder</title>
+    <title>Floating labels example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
 
     <!-- Bootstrap core CSS -->
-      <link href="/TPFinal/recursos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/TPFinal/recursos/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -30,23 +30,33 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/TPFinal/recursos/css/signin.css" rel="stylesheet">
+    <link rel="stylesheet" href="/tpfinal/recursos/css/floating-labels.css">
   </head>
-  <body class="text-center">
+  <body>
     <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
-      <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Ingrese sus datos</h1>
-      <label for="inputUsuario" class="sr-only">Usuario</label>
-      <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" name="usuario" required autofocus>
-      <label for="inputPassword" class="sr-only">Contraseña</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" name="password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Recordarme
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
-      <p class="mt-5 mb-3 text-muted">&copy; Garlopa Company 2020</p>
-    </form>
-  </body>
+  <div class="text-center mb-4">
+    <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Ingrese sus datos</h1>
+
+  </div>
+
+  <div class="form-label-group">
+    <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" name="usuario" required autofocus>
+    <label for="inputEmail">Usuario</label>
+  </div>
+
+  <div class="form-label-group">
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+    <label for="inputPassword">Contraseña</label>
+  </div>
+
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Recordarme
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+  <p class="mt-5 mb-3 text-muted text-center">&copy; Garlopa Company 2020</p>
+</form>
+</body>
 </html>
