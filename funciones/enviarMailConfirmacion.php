@@ -7,9 +7,13 @@ require '../recursos/PHPMailer/src/Exception.php';
 require '../recursos/PHPMailer/src/PHPMailer.php';
 require '../recursos/PHPMailer/src/SMTP.php';
 
+
 function enviaMailConfirmacion($nombreUsuario,$emailUsuario,$passwordUsuario,$hashUsuario){
     //enviar mail confirmacion
-
+    $conexion = conectarBaseDeDatos();
+    $sql = "SELECT Email , Password from usuario where Id = 1 ";
+    $result = $conexion->query($sql);
+    $mostrar = $result->fetch_assoc();
 
 
     $mail = new PHPMailer(true);
@@ -20,13 +24,13 @@ function enviaMailConfirmacion($nombreUsuario,$emailUsuario,$passwordUsuario,$ha
         $mail->isSMTP();                                            // Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail->Username   = 'garlopacompany@gmail.com';                     // SMTP username
-        $mail->Password   = 'Unlam2020';                               // SMTP password
+        $mail->Username   = $mostrar['Email'];                      // SMTP username
+        $mail->Password   = $mostrar['Password'];                   // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
-        $mail->setFrom('garlopacompany@gmail.com', 'Garlopa Company');
+        $mail->setFrom($mostrar['Email'], 'Garlopa Company');
         $mail->addAddress($emailUsuario);     // Add a recipient
 
 
