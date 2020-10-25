@@ -38,16 +38,15 @@ function enviaMailConfirmacion($nombreUsuario,$emailUsuario,$passwordUsuario,$ha
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Account confirmation Garlopa Company';
         $mail->Body    = '
- 
-Gracias por registrarte!
-Su cuenta ha sido creada. Puede iniciar sesión con las siguientes credenciales después de haber activado su cuenta presionando la URL a continuación.
- 
-------------------------
-Username: '.$nombreUsuario.'
-Password: '.$passwordUsuario.'
-------------------------
- 
-Haga click en este enlace para activar su cuenta:
+
+Gracias por registrarte! "<br>" Su cuenta ha sido creada. Puede iniciar sesión con las siguientes credenciales después de haber activado su cuenta presionando la URL a continuación.
+"<br>"
+------------------------"<br>"
+Username: '.$nombreUsuario.' "<br>"
+Password: '.$passwordUsuario.' "<br>"
+------------------------"<br>"
+ "<br>"
+Haga click en este enlace para activar su cuenta:"<br>"
 http://localhost/tpfinal/verificar.php?email='.$emailUsuario.'&hash='.$hashUsuario.'
  
 ';
