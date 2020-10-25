@@ -41,9 +41,6 @@
     <div class="container">
       <h1 class="display-3">Hello, world!</h1>
       <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Agregar Usuario
-        </button>
     </div>
   </div>
 
@@ -74,7 +71,7 @@
 </main>
 
 <footer class="container">
-  <p>&copy; Company 2017-2020</p>
+  <p>&copy; Garlopa Company 2020</p>
 </footer>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>

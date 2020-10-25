@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Floating labels example · Bootstrap</title>
+    <title>Login Garlopa</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
 
@@ -33,30 +33,42 @@
     <link rel="stylesheet" href="/tpfinal/recursos/css/floating-labels.css">
   </head>
   <body>
-    <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
-  <div class="text-center mb-4">
-    <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
-    <h1 class="h3 mb-3 font-weight-normal">Ingrese sus datos</h1>
+        <?php include "header.php"?>
+        <div class="container">
+            <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
+                <div class="text-center mb-4">
+                    <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal">Ingrese sus datos</h1>
 
-  </div>
+                </div>
 
-  <div class="form-label-group">
-    <input type="text" id="inputEmail" class="form-control" placeholder="Usuario" name="usuario" required autofocus>
-    <label for="inputEmail">Usuario</label>
-  </div>
+                <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Correo electronico" name="email"
+                           required autofocus>
+                    <label for="inputEmail">Correo electrónico</label>
+                </div>
 
-  <div class="form-label-group">
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-    <label for="inputPassword">Contraseña</label>
-  </div>
+                <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+                    <label for="inputPassword">Contraseña</label>
+                </div>
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Recordarme
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
-  <p class="mt-5 mb-3 text-muted text-center">&copy; Garlopa Company 2020</p>
-</form>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Recordarme
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+
+                <p class="mt-5 mb-3 text-muted text-center">&copy; Garlopa Company 2020</p>
+            </form>
+        </div>
+
 </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>
 </html>
+</html>
+
+
+
