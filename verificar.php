@@ -68,7 +68,6 @@
     echo '<div class="alert alert-danger">Enlace no válido, utilice el enlace que se le envió a su correo electrónico.</div>';
     }
 
-
     ?>
     </div>
 
