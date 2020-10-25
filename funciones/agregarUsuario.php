@@ -1,6 +1,5 @@
 <?php
-
-include_once "conexion.php";
+include 'enviarMailConfirmacion.php';
 $conexion = conectarBaseDeDatos();
 
 if (isset($_POST['nombre']) && !empty($_POST['nombre']) AND isset($_POST['email'])) {
@@ -12,57 +11,18 @@ if (isset($_POST['nombre']) && !empty($_POST['nombre']) AND isset($_POST['email'
 
 }
 
-
-////////////////////////
 $sql = "insert into usuario (Nombre, Apellido, Email , Password, Hash) VALUES ('$nombre', '$apellido','$email','$password', '$hash')";
 
 $conexion->query($sql);
 
-//enviar mail confirmacion
-
-$to      = $email; // Send email to our user
-$subject = 'Signup | Verification'; // Give the email a subject
-$message = '
- 
-Gracias por registrarte!
-Su cuenta ha sido creada, puede iniciar sesión con las siguientes credenciales después de haber activado su cuenta presionando la URL a continuación.
- 
-------------------------
-Username: '.$nombre.'
-Password: '.$password.'
-------------------------
- 
-Haga click en este enlace para activar su cuenta:
-http://localhost/tpfinal/verificar.php?email='.$email.'&hash='.$hash.'
- 
-'; // Our message above including the link
-
-$headers = 'From:registracion@garlopa.com.ar' . "\r\n"; // Set from headers
-mail($to, $subject, $message, $headers); // Send our email
-
+enviaMailConfirmacion($nombre,$email,$password,$hash);
 
 if ($conexion->errno) {
     echo "Ha ocurrido un error";
     echo $conexion->errno . " - " . $conexion->error;
 } else {
-
-    //header("Location: ../login.php");
+    header("Location: ../login.php");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*probando la validacion por mail
