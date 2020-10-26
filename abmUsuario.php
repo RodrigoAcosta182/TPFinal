@@ -60,16 +60,18 @@
                 <?php
                 include("funciones/conexion.php");
                 $conexion = conectarBaseDeDatos();
-                $sql = "select Nombre, Apellido, Email,Password, Active from usuario";
+                $sql = "select Id,Nombre, Apellido, Email,Password, Active from usuario";
 
                 $result = mysqli_query($conexion,$sql);
                 while($mostrar = mysqli_fetch_array($result)){
 
-                            $datos= $mostrar[0]."||".
-                            $mostrar[1]."||".
-                            $mostrar[2]."||".
-                            $mostrar[3]."||".
-                            $mostrar[4]."||";
+                            $datos=
+                                $mostrar[0]."||".
+                                $mostrar[1]."||".
+                                $mostrar[2]."||".
+                                $mostrar[3]."||".
+                                $mostrar[4]."||".
+                                $mostrar[5]."||";
 
                     ?>
                     <tr>
@@ -100,6 +102,12 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>
 <script src="recursos/js/abmUsuario.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        $('#')
+
+    });
+</script>
 </html>
 
 <?php

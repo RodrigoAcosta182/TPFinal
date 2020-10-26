@@ -1,10 +1,10 @@
 function agregaform(datos){
     d= datos.split('||');
 
-    $('#nombre').val(d[0]);
-    $('#apellido').val(d[1]);
-    $('#email').val(d[2]);
-    $('#password').val(d[3]);
-    $('#active').val(d[4]);
-
+    $('#idpersona').val(d[0]);
+    $('#nombre').val(d[1]);
+    $('#apellido').val(d[2]);
+    $('#email').val(d[3]);
+    $('#password').val(d[4]);
+    $('#active').val(d[5]);
 }

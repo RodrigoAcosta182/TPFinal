@@ -9,7 +9,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <input type="text" hidden="" id="idpersona">
+                <form action="/TPFinal/funciones/abmUsuario.php" method="post"
+                <input type="hidden"  id="idpersona">
                 <label for="">Nombre</label>
                 <input type="text" name="" id="nombre" class="form-control input-sm">
                 <label for="">Apellido</label>
@@ -22,8 +23,9 @@
                 <input type="text" name="" id="active" class="form-control input-sm">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-warning" id="actualizadatos">Modificar</button>
+                <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
             </div>
+            </form>
         </div>
     </div>
 </div>
