@@ -52,6 +52,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellido</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Rol</th>
                     <th scope="col">Active</th>
                     <th scope="col">Accion</th>
                 </tr>
@@ -78,6 +79,9 @@
                         <td><?php echo $mostrar["Nombre"] ?></td>
                         <td><?php echo $mostrar["Apellido"] ?></td>
                         <td><?php echo $mostrar["Email"]?> </td>
+                        <td>
+
+                        </td>
                         <td><?php echo $mostrar["Active"]?> </td>
                         <td>
                             <button class="btn btn-warning" data-toggle="modal" data-target="#ModificarUsuario" onclick="agregaform('<?php echo $datos?>')">Modificar</button>

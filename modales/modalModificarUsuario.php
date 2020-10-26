@@ -10,17 +10,28 @@
             </div>
             <div class="modal-body">
                 <form action="/TPFinal/funciones/abmUsuario.php" method="post"
-                <input type="hidden"  id="idpersona">
+                <label for=""></label>
+                <input type="text"hidden id="idpersona" name="idpersona" class="form-control input-sm">
                 <label for="">Nombre</label>
-                <input type="text" name="" id="nombre" class="form-control input-sm">
+                <input type="text" name="nombre" id="nombre" autocomplete="off" class="form-control input-sm">
                 <label for="">Apellido</label>
-                <input type="text" name="" id="apellido" class="form-control input-sm">
+                <input type="text" name="apellido" id="apellido" autocomplete="off" class="form-control input-sm">
                 <label for="">Email</label>
-                <input type="text" name="" id="email" class="form-control input-sm">
+                <input type="text" name="email" id="email" autocomplete="off" class="form-control input-sm">
                 <label for="">Password</label>
-                <input type="text" name="" id="password" class="form-control input-sm">
+                <input type="text" name="" id="password" autocomplete="off" class="form-control input-sm">
+                <label for="">Rol</label>
+                <select name="" id="" class="form-control input-sm">
+                    <option value="">Administrador</option>
+                    <option value="">Chofer</option>
+                    <option value="">Supervisor</option>
+                    <option value="">Encargado</option>
+                </select>
                 <label for="">Activo</label>
-                <input type="text" name="" id="active" class="form-control input-sm">
+                <select name="active" id="active" class="form-control input-sm">
+                    <option value="0">Desactivado</option>
+                    <option value="1">Activado</option>
+                </select>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
