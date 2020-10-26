@@ -23,11 +23,7 @@
                 <input type="text" name="" id="active" class="form-control input-sm">
             </div>
             <div class="modal-footer">
-<<<<<<< HEAD
                 <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
-=======
-                <button type="button" class="btn btn-primary" id="actualizadatos">Modificar</button>
->>>>>>> 846d75b7f12c02610587084adfdb7aac29cdbe0c
             </div>
             </form>
         </div>
