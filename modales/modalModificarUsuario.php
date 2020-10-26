@@ -1,8 +1,8 @@
 <!-- Modal -->
 <div class="modal fade" id="ModificarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -23,7 +23,11 @@
                 <input type="text" name="" id="active" class="form-control input-sm">
             </div>
             <div class="modal-footer">
+<<<<<<< HEAD
                 <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
+=======
+                <button type="button" class="btn btn-primary" id="actualizadatos">Modificar</button>
+>>>>>>> 846d75b7f12c02610587084adfdb7aac29cdbe0c
             </div>
             </form>
         </div>
