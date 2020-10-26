@@ -34,9 +34,6 @@
   </head>
   <body>
         <?php include "header.php"?>
-
-        <div class="container">
-            </div>
             <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
                 <div class="text-center mb-4">
                     <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
@@ -64,7 +61,7 @@
 
                 <p class="mt-5 mb-3 text-muted text-center">&copy; Garlopa Company 2020</p>
             </form>
-        </div>
+
 
 </body>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
