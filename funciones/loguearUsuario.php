@@ -18,7 +18,7 @@ if ($cantidadDeFilas == 1) {
     header("Location: ../index.php");
 } else {
     $_SESSION['mensaje'] = "Usuario y/o contraseña invalido";
-    //header("Location: ../index.php");
-    echo "no se logueo";
+    header("Location: ../login.php");
+
 }
 

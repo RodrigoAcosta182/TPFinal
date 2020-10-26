@@ -34,7 +34,9 @@
   </head>
   <body>
         <?php include "header.php"?>
+
         <div class="container">
+            </div>
             <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
                 <div class="text-center mb-4">
                     <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">

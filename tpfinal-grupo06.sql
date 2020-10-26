@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2020 a las 04:45:29
+-- Tiempo de generación: 26-10-2020 a las 23:27:04
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -31,16 +31,21 @@ USE `tpfinal-grupo06`;
 
 CREATE TABLE `usuario` (
   `Id` int(11) NOT NULL,
-  `Usuario` varchar(30) NOT NULL,
-  `Password` varchar(30) NOT NULL
+  `Nombre` varchar(32) NOT NULL,
+  `Apellido` varchar(32) NOT NULL,
+  `Email` varchar(32) NOT NULL,
+  `Password` varchar(32) NOT NULL,
+  `Hash` varchar(32) NOT NULL,
+  `Active` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`Id`, `Usuario`, `Password`) VALUES
-(1, 'admin', 'admin');
+INSERT INTO `usuario` (`Id`, `Nombre`, `Apellido`, `Email`, `Password`, `Hash`, `Active`) VALUES
+(1, 'admin', 'admin', 'garlopacompany@gmail.com', 'Unlam2020', '', 1),
+(29, 'Rodrigo', 'Acosta', 'jracosta1991@gmail.com', '123456', '08c5433a60135c32e34f46a71175850c', 1);
 
 --
 -- Índices para tablas volcadas
@@ -60,7 +65,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
