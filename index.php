@@ -45,34 +45,34 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
+          <img src="recursos/img/camion1.jpg" class="embed-responsive" width="100%" height="">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-left">
-            <h1>Example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <h1>Garlopa Transfer</h1>
+            <p>Somos una empresa especializada en la prestación de servicios de transporte y distribución de todo tipo de materiales, con capacidad de operar a nivel nacional.</p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
+          <img src="recursos/img/camiones.jpg" class="embed-responsive" width="100%" height="auto">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-          </div>
+            <div class="carousel-caption text-left">
+                <h1>Vanguardia</h1>
+                <p>Modernidad, confort y eficiencia en todos nuestros vehiculos.</p>
+            </div>
         </div>
       </div>
       <div class="carousel-item">
+          <img src="recursos/img/carga.jpg" class="embed-responsive" width="100%" height="auto">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption text-right">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+          <div class="container">
+              <div class="carousel-caption text-left">
+                  <h1>Confianza</h1>
+                  <p>Almacenamos, gestionamos y enviamos tus pedidos a donde quieras.</p>
+              </div>
           </div>
-        </div>
       </div>
     </div>
     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -91,42 +91,31 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-
-    <!-- START THE FEATURETTES -->
-
-
-    <div class="row featurette">
-
-
-
-    <div class="container">
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Garlopa Company.</h2>
-        <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-          <video width="500px" controls  autoplay loop playsinline src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
-          <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
-
-      </div>
-    </div>
-    </div>
-
-
-
-    <hr class="featurette-divider">
-
-    </div><!-- /END THE FEATURETTES -->
-
+      <hr>
+      <!-- START THE FEATURETTES -->
+        <div class="row featurette">
+            <div class="container">
+                <h1 class="text-center featurette-heading" id="nosotros">Sobre nosotros</h1>
+                <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <h3 class="featurette-heading">Garlopa Transfer</h3>
+                    <p class="lead">Somos una empresa ubicada en zona oeste, nos dedicamos al transporte de todo tipo de cargas. Nuestro principal objetivo es, brindarles confianza, seguridad y rapidez a cada servicio que brindamos.
+                        Poseemos distribución en Capital Federal, GBA y principales ciudades del país. Transporte de Corta, Media y Larga Distancia. Operaciones Aduaneras Acarreos (Traslados Especiales).</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                      <video width="500px" controls src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+                      <!-- controls  autoplay loop playsinline -->
+                      <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
+                  </div>
+                </div>
+            </div>
+        <hr class="featurette-divider">
+        </div><!-- /END THE FEATURETTES -->
   </div><!-- /.container -->
 
-
-  <!-- FOOTER -->
-  <footer class="container">
-      <hr>
-      <p>&copy; Garlopa Company 2020</p>
-  </footer>
+  <?php
+  include_once "footer.php";
+  ?>
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>
