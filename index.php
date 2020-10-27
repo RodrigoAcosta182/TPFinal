@@ -45,7 +45,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="recursos/img/camion.png" alt="">
+          <img src="recursos/img/camion.png" class="embed-responsive">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-left">
@@ -122,11 +122,9 @@
   </div><!-- /.container -->
 
 
-  <!-- FOOTER -->
-  <footer class="container">
-      <hr>
-      <p>&copy; Garlopa Company 2020</p>
-  </footer>
+  <?php
+  include_once "footer.php";
+  ?>
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>
