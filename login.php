@@ -38,7 +38,30 @@
   ?>
 
 
-        <?php include "header.php"?>
+  <?php session_start()?>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" style="cursor: default" href="#">Garlopa Transfer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <?php
+          if (isset($_SESSION["logueado"]) == 1){
+              echo '<a href="/tpfinal/funciones/cerrarSesion.php?cerrarSesion=1"
+                   class="btn btn-danger" >Cerrar Sesion</a>';
+          }else{
+              echo '<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+                Registrarse
+                </button>';
+          }
+          ?>
+      </div>
+  </nav>
+
+  <?php include "modales/modalRegistrar.php" ?>
             <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
                 <div class="text-center mb-4">
                     <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
