@@ -11,7 +11,7 @@
                 <a class="nav-link" href="/TPFinal/abmUsuario.php">Permisos <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Estadisticas</a>
+                <a class="nav-link" href="/TPFinal/estadistica.php">Estadisticas</a>
             </li>
             <!--
             <li class="nav-item">
