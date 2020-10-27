@@ -91,37 +91,24 @@
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-
-    <!-- START THE FEATURETTES -->
-
-
-    <div class="row featurette">
-
-
-
-    <div class="container">
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Garlopa Company.</h2>
-        <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-          <video width="500px"  src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
-          <!-- controls  autoplay loop playsinline -->
-          <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
-
-      </div>
-    </div>
-    </div>
-
-
-
-    <hr class="featurette-divider">
-
-    </div><!-- /END THE FEATURETTES -->
-
+      <!-- START THE FEATURETTES -->
+        <div class="row featurette">
+            <div class="container">
+                <div class="row featurette">
+                  <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Garlopa Company.</h2>
+                    <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
+                  </div>
+                  <div class="col-md-5 order-md-1">
+                      <video width="500px"  src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+                      <!-- controls  autoplay loop playsinline -->
+                      <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
+                  </div>
+                </div>
+            </div>
+        <hr class="featurette-divider">
+        </div><!-- /END THE FEATURETTES -->
   </div><!-- /.container -->
-
 
   <?php
   include_once "footer.php";

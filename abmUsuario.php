@@ -95,9 +95,7 @@
                 </tbody>
             </table>
         </div>
-
     </div> <!-- /container -->
-
 </main>
 
 <?php
