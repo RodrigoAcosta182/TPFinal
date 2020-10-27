@@ -106,7 +106,8 @@
         <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
       </div>
       <div class="col-md-5 order-md-1">
-          <video width="500px" controls  autoplay loop playsinline src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+          <video width="500px"  src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+          <!-- controls  autoplay loop playsinline -->
           <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
 
       </div>
