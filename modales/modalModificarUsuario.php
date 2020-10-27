@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="/TPFinal/funciones/abmUsuario.php" method="post"
+                <form action="/TPFinal/funciones/abmUsuarioModificar.php" method="post"
                 <label for=""></label>
                 <input type="text"hidden id="idpersona" name="idpersona" class="form-control input-sm">
                 <label for="">Nombre</label>
@@ -19,7 +19,7 @@
                 <label for="">Email</label>
                 <input type="text" name="email" id="email" autocomplete="off" class="form-control input-sm">
                 <label for="">Password</label>
-                <input type="text" name="" id="password" autocomplete="off" class="form-control input-sm">
+                <input type="password" name="" id="password" autocomplete="off" class="form-control input-sm">
                 <label for="">Rol</label>
                 <select name="" id="" class="form-control input-sm">
                     <option value="">Administrador</option>
