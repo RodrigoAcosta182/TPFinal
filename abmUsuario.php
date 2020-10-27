@@ -85,6 +85,7 @@
                         <td><?php echo $mostrar["Active"]?> </td>
                         <td>
                             <button class="btn btn-warning" data-toggle="modal" data-target="#ModificarUsuario" onclick="agregaform('<?php echo $datos?>')">Modificar</button>
+                            <a href="funciones/abmUsuarioEliminar.php?eliminar=<?php echo  $mostrar[0]?>" class="btn btn-danger" onclick="return confirm('DESEA ELIMINAR EL USUARIO DE MANERA VIOLENTA?')">Eliminar</a>
                         </td>
 
                     </tr>
