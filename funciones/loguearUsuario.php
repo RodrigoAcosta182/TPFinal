@@ -15,7 +15,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) AND isset($_POST['password'
 if ($cantidadDeFilas == 1) {
     $_SESSION["logueado"] = 1;
     $_SESSION["email"] = $_POST['email'];;
-    header("Location: ../indexOld.php");
+    header("Location: ../index.php");
 } else {
     $_SESSION['mensaje'] = "Usuario y/o contraseña invalido";
     header("Location: ../login.php");

@@ -30,7 +30,7 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
+    <link href="/tpfinal/recursos/css/carousel.css" rel="stylesheet">
   </head>
   <body>
     <?php include "header.php"?>
@@ -94,31 +94,30 @@
 
     <!-- START THE FEATURETTES -->
 
-    <hr class="featurette-divider">
 
     <div class="row featurette">
 
 
-    <hr class="featurette-divider">
+
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Garlopa Company. <span class="text-muted">Una empresa familiar.</span></h2>
+        <h2 class="featurette-heading">Garlopa Company.</h2>
         <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
       </div>
       <div class="col-md-5 order-md-1">
-          <video controls src="/tpfinal/recursos/video/JCVD.mp4" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+          <video width="500px" controls  autoplay loop playsinline src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
           <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
 
       </div>
     </div>
 
+
+
+
     <hr class="featurette-divider">
 
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
+    </div><!-- /END THE FEATURETTES -->
 
   </div><!-- /.container -->
 
@@ -129,5 +128,5 @@
   </footer>
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/tpfinal/recursos/js/bootstrap.bundle.min.js"></script>
 </html>
