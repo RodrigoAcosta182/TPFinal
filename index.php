@@ -95,7 +95,7 @@
       <!-- START THE FEATURETTES -->
         <div class="row featurette">
             <div class="container">
-                <h1 class="text-center featurette-heading">Quienes somos</h1>
+                <h1 class="text-center featurette-heading" id="nosotros">Sobre nosotros</h1>
                 <div class="row featurette">
                   <div class="col-md-7 order-md-2">
                     <h3 class="featurette-heading">Garlopa Transfer</h3>
