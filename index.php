@@ -50,7 +50,7 @@
         <div class="container">
           <div class="carousel-caption text-left">
             <h1>Garlopa Transfer</h1>
-            <p>Entregando Garlopas a domicilio desde tiempos immemorables. No olvides Registrarte y ser parte de Garlopa Transfer</p>
+            <p>Somos una empresa especializada en la prestación de servicios de transporte y distribución de todo tipo de materiales, con capacidad de operar a nivel nacional.</p>
           </div>
         </div>
       </div>
@@ -59,8 +59,8 @@
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
             <div class="carousel-caption text-left">
-                <h1>SEGURIDAD</h1>
-                <p>Entregando Garlopas a domicilio desde tiempos immemorables. No olvides Registrarte y ser parte de Garlopa Transfer</p>
+                <h1>Vanguardia</h1>
+                <p>Modernidad, confort y eficiencia en todos nuestros vehiculos.</p>
             </div>
         </div>
       </div>
@@ -69,8 +69,8 @@
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
           <div class="container">
               <div class="carousel-caption text-left">
-                  <h1>CONFIANZA</h1>
-                  <p>Entregando Garlopas a domicilio desde tiempos immemorables. No olvides Registrarte y ser parte de Garlopa Transfer</p>
+                  <h1>Confianza</h1>
+                  <p>Almacenamos, gestionamos y enviamos tus pedidos a donde quieras.</p>
               </div>
           </div>
       </div>
@@ -89,15 +89,17 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-
+    <hr>
   <div class="container marketing">
       <!-- START THE FEATURETTES -->
         <div class="row featurette">
             <div class="container">
+                <h1 class="text-center featurette-heading">Quienes somos</h1>
                 <div class="row featurette">
                   <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading">Garlopa Company.</h2>
-                    <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
+                    <h3 class="featurette-heading">Garlopa Transfer</h3>
+                    <p class="lead">Somos una empresa ubicada en zona oeste, nos dedicamos al transporte de todo tipo de cargas. Nuestro principal objetivo es, brindarles confianza, seguridad y rapidez a cada servicio que brindamos.
+                        Poseemos distribución en Capital Federal, GBA y principales ciudades del país. Transporte de Corta, Media y Larga Distancia. Operaciones Aduaneras Acarreos (Traslados Especiales).</p>
                   </div>
                   <div class="col-md-5 order-md-1">
                       <video width="500px" controls src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
