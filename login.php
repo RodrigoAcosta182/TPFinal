@@ -47,13 +47,13 @@
                 </div>
 
                 <div class="form-label-group">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Correo electronico" name="email"
+                    <input type="email" id="inputEmail" autocomplete="off" class="form-control" placeholder="Correo electronico" name="email"
                            required autofocus>
                     <label for="inputEmail">Correo electrónico</label>
                 </div>
 
                 <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+                    <input type="password" id="inputPassword" autocomplete="off" class="form-control" placeholder="Password" name="password" required>
                     <label for="inputPassword">Contraseña</label>
                 </div>
 

@@ -45,7 +45,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="recursos/img/camion.png" class="embed-responsive">
+          <img src="recursos/img/camion.png" class="embed-responsive" width="100%" height="">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-left">
@@ -100,7 +100,7 @@
                     <p class="lead">"Usted es una mujer muy hermosa, y yo un joven inexperto. Sin embargo no veo la hora de embadurnarla en aceite, tirarla en la cama, y entubarle la garlopa hasta la garganta." Firma X.</p>
                   </div>
                   <div class="col-md-5 order-md-1">
-                      <video width="500px"  src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
+                      <video width="500px" controls src="/tpfinal/recursos/video/JCVD.mp4" class=" featurette-heading bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"></video>
                       <!-- controls  autoplay loop playsinline -->
                       <!--<img src="/tpfinal/recursos/img/camion.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"alt="">-->
                   </div>
