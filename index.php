@@ -89,8 +89,9 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-    <hr>
+
   <div class="container marketing">
+      <hr>
       <!-- START THE FEATURETTES -->
         <div class="row featurette">
             <div class="container">
