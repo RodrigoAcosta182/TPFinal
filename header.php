@@ -1,3 +1,4 @@
+<?php session_start()?>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand " href="#">Garlopa Transfer</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,11 +25,16 @@
                 </div>
             </li>-->
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
+        <?php
+        if (isset($_SESSION["logueado"]) == 1){
+            echo '<a href="/tpfinal/funciones/cerrarSesion.php?cerrarSesion=1"
+                   class="btn btn-danger" >Cerrar Sesion</a>';
+        }else{
+            echo '<button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal">
                 Registrarse
-            </button>
-        </form>
+                </button>';
+        }
+        ?>
     </div>
 </nav>
 

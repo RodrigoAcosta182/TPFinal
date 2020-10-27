@@ -33,6 +33,11 @@
     <link rel="stylesheet" href="/tpfinal/recursos/css/floating-labels.css">
   </head>
   <body>
+  <?php session_start();
+        session_destroy();
+  ?>
+
+
         <?php include "header.php"?>
             <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
                 <div class="text-center mb-4">
