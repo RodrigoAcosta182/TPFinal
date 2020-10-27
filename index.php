@@ -99,7 +99,7 @@
 
 
 
-
+    <div class="container">
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Garlopa Company.</h2>
@@ -111,7 +111,7 @@
 
       </div>
     </div>
-
+    </div>
 
 
 
@@ -124,6 +124,7 @@
 
   <!-- FOOTER -->
   <footer class="container">
+      <hr>
       <p>&copy; Garlopa Company 2020</p>
   </footer>
 </main>
