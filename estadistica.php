@@ -30,7 +30,8 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/tpfinal/recursos/css/dashboard.css" rel="stylesheet">
+   <!-- <link href="/tpfinal/recursos/css/dashboard.css" rel="stylesheet">-->
+    <script src="/tpfinal/recursos/js/dashboard.js"></script>
   </head>
   <body>
   <?php include "header.php"?>
