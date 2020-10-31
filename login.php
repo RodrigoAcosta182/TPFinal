@@ -64,7 +64,7 @@
   <?php include "modales/modalRegistrar.php" ?>
             <form class="form-signin" action="/TPFinal/funciones/loguearUsuario.php" method="post">
                 <div class="text-center mb-4">
-                    <img class="mb-4" src="/TPFinal/recursos/img/naruto.jpg" alt="" width="72" height="72">
+                    <img class="mb-4" src="/TPFinal/recursos/img/GT3.PNG" alt="" width="140" height="72">
                     <h1 class="h3 mb-3 font-weight-normal">Ingrese sus datos</h1>
 
                 </div>
