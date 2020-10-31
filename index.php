@@ -45,7 +45,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="/tpfinal/recursos/img/camion1.jpg" class="embed-responsive" height="">
+          <img src="/tpfinal/recursos/img/camion2.jpg">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
           <div class="carousel-caption text-left">
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="carousel-item">
-          <img src="/tpfinal/recursos/img/camiones.jpg" class="embed-responsive">
+          <img src="/tpfinal/recursos/img/camiones.jpg" class="table-responsive-lg">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
         <div class="container">
             <div class="carousel-caption text-left">
