@@ -43,6 +43,8 @@
         </div>
     </div>
 
+
+
     <div class="container">
         <?php include "funciones/verificarUsuario.php";
             $email = $_GET['email'];
