@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-11-2020 a las 01:48:53
+-- Tiempo de generación: 08-11-2020 a las 19:38:52
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -32,8 +32,22 @@ USE `tpfinal-grupo06`;
 CREATE TABLE `arrastre` (
   `Id` int(255) NOT NULL,
   `Codigo` int(11) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL
+  `Descripcion` varchar(50) NOT NULL,
+  `Patente` varchar(10) NOT NULL,
+  `NroChasis` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `arrastre`
+--
+
+INSERT INTO `arrastre` (`Id`, `Codigo`, `Descripcion`, `Patente`, `NroChasis`) VALUES
+(1, 1, 'Araña', 'AA100AS', '585822'),
+(2, 2, 'Araña', 'AC125AD', '605737'),
+(3, 3, 'Jaula', 'AC296AS', '882174'),
+(4, 4, 'Jaula', 'AB318AD', '595287'),
+(5, 5, 'Tanque', 'AB405AG', '583419'),
+(6, 6, 'Granel', 'AA624AS', '852157');
 
 -- --------------------------------------------------------
 
@@ -69,6 +83,16 @@ CREATE TABLE `cliente` (
   `pLocalidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `Codigo`, `Nombre`, `Apellido`, `Dni`, `Domicilio`, `pProvincia`, `pLocalidad`) VALUES
+(1, 1, 'Ricardo', 'Fort', '25598516', 'Av. Miami 2012', 1, 5),
+(2, 2, 'Marcelo Hugo', 'Tinelli', '18365482', 'Segurola 654', 1, 6),
+(3, 3, 'Lionel Andres', 'Messi', '33016244', 'Reina Elisenda 26', 1, 7),
+(4, 4, 'Jean Claude', 'Van-Damme', '12659845', 'Coronel Brandsen 1048', 1, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -77,14 +101,25 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `empleado` (
   `Id` int(255) NOT NULL,
+  `Codigo` int(50) NOT NULL,
   `pTipoEmpleado` int(11) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
   `Apellido` varchar(50) NOT NULL,
   `Dni` varchar(50) NOT NULL,
   `pProvincia` int(11) NOT NULL,
   `pLocalidad` int(11) NOT NULL,
-  `pLicencia` int(11) NOT NULL
+  `pLicencia` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `empleado`
+--
+
+INSERT INTO `empleado` (`Id`, `Codigo`, `pTipoEmpleado`, `Nombre`, `Apellido`, `Dni`, `pProvincia`, `pLocalidad`, `pLicencia`) VALUES
+(1, 1, 1, 'Julio', 'Buffarini', '2365452', 4, 12, 5),
+(2, 2, 2, 'Rawl', 'Alejandro', '35872156', 10, 9, NULL),
+(3, 3, 1, 'Anuel', 'AA', '32548932', 14, 11, 11),
+(4, 4, 2, 'J', 'Balvin', '31687231', 21, 13, NULL);
 
 -- --------------------------------------------------------
 
@@ -94,9 +129,28 @@ CREATE TABLE `empleado` (
 
 CREATE TABLE `licencia` (
   `Id` int(255) NOT NULL,
-  `Codigo` int(255) NOT NULL,
+  `Codigo` varchar(255) NOT NULL,
   `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `licencia`
+--
+
+INSERT INTO `licencia` (`Id`, `Codigo`, `Descripcion`) VALUES
+(1, 'Class 1', 'Camiones sin acomplado hasta 12.000kg'),
+(2, 'Class 2', 'Gases'),
+(3, 'Class 3', 'Flammable Liquids'),
+(4, 'Class 4.1', 'Flammable Solids or Substances'),
+(5, 'Class 4.2', 'Flammable solids'),
+(6, 'Class 4.3', 'Substances which, in contact with water, emit flam'),
+(7, 'Class 5.1', 'Miscellaneous dangerous substances and articles'),
+(8, 'Class 5.2', 'Organic peroxides - most will burn rapidly and are'),
+(9, 'Class 6.1', 'Toxic substances'),
+(10, 'Class 6.2', 'Infectious substances'),
+(11, 'Class 7', 'Radioactive Substances'),
+(12, 'Class 8', 'Corrosives'),
+(13, 'Class 9', 'Miscellaneous dangerous substances and articles');
 
 -- --------------------------------------------------------
 
@@ -106,8 +160,29 @@ CREATE TABLE `licencia` (
 
 CREATE TABLE `localidad` (
   `Id` int(11) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL
+  `Codigo` int(11) NOT NULL,
+  `Descripcion` varchar(50) NOT NULL,
+  `pProvincia` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `localidad`
+--
+
+INSERT INTO `localidad` (`Id`, `Codigo`, `Descripcion`, `pProvincia`) VALUES
+(1, 1, 'Caseros', 1),
+(2, 2, 'Moron', 1),
+(3, 3, 'Ituzaingo', 1),
+(4, 4, 'Gonzalez Catan', 1),
+(5, 5, 'Moreno', 1),
+(6, 6, 'Pilar', 1),
+(7, 7, 'Santos Lugares', 1),
+(8, 8, 'Ciudadela', 1),
+(9, 9, 'Villa Carlos Paz', 10),
+(10, 10, 'San Rafael', 8),
+(11, 11, 'Colon', 14),
+(12, 12, 'Trelew', 4),
+(13, 13, 'La Quiaca', 21);
 
 -- --------------------------------------------------------
 
@@ -131,9 +206,18 @@ CREATE TABLE `mantenimiento` (
 
 CREATE TABLE `marca` (
   `Id` int(11) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL,
-  `pModelo` int(11) NOT NULL
+  `Codigo` int(50) NOT NULL,
+  `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `marca`
+--
+
+INSERT INTO `marca` (`Id`, `Codigo`, `Descripcion`) VALUES
+(1, 1, 'IVECO'),
+(2, 2, 'SCANIA'),
+(3, 3, 'MERCEDES BENZ');
 
 -- --------------------------------------------------------
 
@@ -143,8 +227,22 @@ CREATE TABLE `marca` (
 
 CREATE TABLE `modelo` (
   `Id` int(11) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL
+  `Codigo` varchar(20) NOT NULL,
+  `Descripcion` varchar(50) NOT NULL,
+  `pMarca` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `modelo`
+--
+
+INSERT INTO `modelo` (`Id`, `Codigo`, `Descripcion`, `pMarca`) VALUES
+(1, '1', 'Daily', 1),
+(2, '2', 'Eurostar', 1),
+(3, '3', 'G310', 2),
+(4, '4', 'G460', 2),
+(5, '5', 'Actros 1846', 3),
+(6, '6', 'Axor', 3);
 
 -- --------------------------------------------------------
 
@@ -154,9 +252,38 @@ CREATE TABLE `modelo` (
 
 CREATE TABLE `provincia` (
   `Id` int(50) NOT NULL,
-  `Descripcion` varchar(50) NOT NULL,
-  `pLocalidad` int(11) NOT NULL
+  `Codigo` int(11) NOT NULL,
+  `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `provincia`
+--
+
+INSERT INTO `provincia` (`Id`, `Codigo`, `Descripcion`) VALUES
+(1, 1, 'Buenos Aires'),
+(2, 2, 'Tierra del Fuego'),
+(3, 3, 'Santa Cruz'),
+(4, 4, 'Chubut'),
+(5, 5, 'Rio Negro'),
+(6, 6, 'Neuquen'),
+(7, 7, 'La Pampa'),
+(8, 8, 'Mendoza'),
+(9, 9, 'San Luis'),
+(10, 10, 'Cordoba'),
+(11, 11, 'San Juan'),
+(12, 12, 'La Rioja'),
+(13, 13, 'Santa Fe'),
+(14, 14, 'Entre Rios'),
+(15, 15, 'Corrientes'),
+(16, 16, 'Chaco'),
+(17, 17, 'Santiago del Estero'),
+(18, 18, 'Tucuman'),
+(19, 19, 'Catamarca'),
+(20, 20, 'Salta'),
+(21, 21, 'Jujuy'),
+(22, 22, 'Formosa'),
+(23, 23, 'Misiones');
 
 -- --------------------------------------------------------
 
@@ -166,9 +293,20 @@ CREATE TABLE `provincia` (
 
 CREATE TABLE `respuesto` (
   `Id` int(11) NOT NULL,
+  `Codigo` int(50) NOT NULL,
   `Descripcion` varchar(50) NOT NULL,
   `Precio` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `respuesto`
+--
+
+INSERT INTO `respuesto` (`Id`, `Codigo`, `Descripcion`, `Precio`) VALUES
+(1, 1, 'Rueda Scania G310', 100000),
+(2, 2, 'Aceite Motul 5100', 10000),
+(3, 3, 'Eje trasero M.BENZ Actros 1846', 30000),
+(4, 4, 'Lona protectora de arrastre', 20000);
 
 -- --------------------------------------------------------
 
@@ -178,13 +316,22 @@ CREATE TABLE `respuesto` (
 
 CREATE TABLE `service` (
   `Id` int(255) NOT NULL,
-  `Descripcion` varchar(255) NOT NULL,
+  `Codigo` int(50) NOT NULL,
   `pTipoService` int(50) NOT NULL,
   `ImporteFinal` double NOT NULL,
   `FechaDesde` datetime NOT NULL,
   `FechaHasta` datetime NOT NULL,
-  `pEmpleado` int(50) NOT NULL
+  `pEmpleado` int(50) NOT NULL,
+  `pVehiculo` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `service`
+--
+
+INSERT INTO `service` (`Id`, `Codigo`, `pTipoService`, `ImporteFinal`, `FechaDesde`, `FechaHasta`, `pEmpleado`, `pVehiculo`) VALUES
+(1, 1, 2, 40000, '2020-01-01 17:39:40', '2020-07-16 22:39:40', 2, 3),
+(2, 2, 1, 100000, '2020-10-08 22:39:40', '2020-11-12 22:39:40', 4, 4);
 
 -- --------------------------------------------------------
 
@@ -198,6 +345,15 @@ CREATE TABLE `servicerepuesto` (
   `pRepuesto` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `servicerepuesto`
+--
+
+INSERT INTO `servicerepuesto` (`id`, `pService`, `pRepuesto`) VALUES
+(1, 1, 2),
+(2, 1, 3),
+(3, 2, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -206,10 +362,19 @@ CREATE TABLE `servicerepuesto` (
 
 CREATE TABLE `sucursalorigen` (
   `id` int(11) NOT NULL,
+  `Codigo` int(20) NOT NULL,
   `Direccion` varchar(50) NOT NULL,
   `pProvincia` int(11) NOT NULL,
   `pLocalidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `sucursalorigen`
+--
+
+INSERT INTO `sucursalorigen` (`id`, `Codigo`, `Direccion`, `pProvincia`, `pLocalidad`) VALUES
+(1, 1, 'Urquiza 2856', 1, 1),
+(2, 2, 'Brandsen', 8, 10);
 
 -- --------------------------------------------------------
 
@@ -219,8 +384,17 @@ CREATE TABLE `sucursalorigen` (
 
 CREATE TABLE `tipoempleado` (
   `Id` int(255) NOT NULL,
+  `Codigo` int(11) NOT NULL,
   `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipoempleado`
+--
+
+INSERT INTO `tipoempleado` (`Id`, `Codigo`, `Descripcion`) VALUES
+(1, 1, 'Chofer'),
+(2, 2, 'Mecanico');
 
 -- --------------------------------------------------------
 
@@ -233,6 +407,14 @@ CREATE TABLE `tiposervice` (
   `Codigo` int(50) NOT NULL,
   `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tiposervice`
+--
+
+INSERT INTO `tiposervice` (`id`, `Codigo`, `Descripcion`) VALUES
+(1, 1, 'Taller Externo'),
+(2, 2, 'Taller Interno');
 
 -- --------------------------------------------------------
 
@@ -251,7 +433,10 @@ CREATE TABLE `tipousuario` (
 
 INSERT INTO `tipousuario` (`Id`, `Descripcion`) VALUES
 (1, 'Administrador'),
-(2, 'Supervisor');
+(2, 'Supervisor'),
+(3, 'Chofer'),
+(4, 'Llano'),
+(5, 'Encargado');
 
 -- --------------------------------------------------------
 
@@ -261,8 +446,17 @@ INSERT INTO `tipousuario` (`Id`, `Descripcion`) VALUES
 
 CREATE TABLE `tipovehiculo` (
   `id` int(11) NOT NULL,
+  `Codigo` int(11) NOT NULL,
   `Descripcion` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tipovehiculo`
+--
+
+INSERT INTO `tipovehiculo` (`id`, `Codigo`, `Descripcion`) VALUES
+(1, 1, 'Camion con acoplado'),
+(2, 2, 'Camion sin acoplar');
 
 -- --------------------------------------------------------
 
@@ -293,7 +487,7 @@ CREATE TABLE `usuario` (
   `Password` varchar(50) NOT NULL,
   `Hash` varchar(50) NOT NULL,
   `Active` int(1) NOT NULL DEFAULT 0,
-  `pTipoUsuario` int(50) NOT NULL
+  `pTipoUsuario` int(50) NOT NULL DEFAULT 4
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -302,7 +496,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`Id`, `Codigo`, `Nombre`, `Apellido`, `Email`, `Password`, `Hash`, `Active`, `pTipoUsuario`) VALUES
 (1, 0, 'admin', 'admin', 'garlopacompany@gmail.com', 'Unlam2020', '', 0, 1),
-(5, 0, 'Emiliano', 'Ortiz', 'emiortiz1992@gmail.com', '1234', 'd86ea612dec96096c5e0fcc8dd42ab6d', 1, 2);
+(6, 0, 'Ariel', 'Molina', 'emilianonahuelortiz@hotmail.com', '123', 'c8c41c4a18675a74e01c8a20e8a0f662', 1, 4),
+(7, 0, 'Emiliano', 'Ortiz', 'emiortiz1992@gmail.com', '1234', '8b16ebc056e613024c057be590b542eb', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -312,16 +507,29 @@ INSERT INTO `usuario` (`Id`, `Codigo`, `Nombre`, `Apellido`, `Email`, `Password`
 
 CREATE TABLE `vehiculo` (
   `id` int(255) NOT NULL,
+  `Codigo` int(11) NOT NULL,
+  `pModelo` int(20) NOT NULL,
   `Patente` varchar(50) NOT NULL,
   `NroChasis` varchar(50) NOT NULL,
+  `NroMotor` varchar(20) NOT NULL,
   `AñoFabricacion` date NOT NULL,
   `pTipoVehiculo` int(50) NOT NULL,
-  `pArrastre` int(50) NOT NULL,
+  `pArrastre` int(50) DEFAULT NULL,
   `kilometraje` bigint(255) UNSIGNED NOT NULL,
-  `pMantenimiento` int(50) NOT NULL,
+  `pMantenimiento` int(50) DEFAULT NULL,
   `pMarca` int(50) NOT NULL,
   `Alarma` bit(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `vehiculo`
+--
+
+INSERT INTO `vehiculo` (`id`, `Codigo`, `pModelo`, `Patente`, `NroChasis`, `NroMotor`, `AñoFabricacion`, `pTipoVehiculo`, `pArrastre`, `kilometraje`, `pMantenimiento`, `pMarca`, `Alarma`) VALUES
+(3, 1, 1, 'AA123CD', 'L53879558', '53879558', '2010-11-06', 1, 1, 20, NULL, 1, b'0'),
+(4, 2, 2, 'AA150QW', 'I82039512', '82039512', '2012-06-24', 2, NULL, 56, NULL, 2, b'0'),
+(5, 3, 6, 'AD870QW', 'M30207594', '30207594', '2020-05-12', 2, NULL, 5, NULL, 3, b'0'),
+(6, 4, 1, 'AC342WW', 'D44260023', '44260023', '2015-11-25', 1, 3, 18, NULL, 1, b'0');
 
 -- --------------------------------------------------------
 
@@ -405,7 +613,8 @@ ALTER TABLE `licencia`
 -- Indices de la tabla `localidad`
 --
 ALTER TABLE `localidad`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `pProvincia` (`pProvincia`);
 
 --
 -- Indices de la tabla `mantenimiento`
@@ -420,21 +629,20 @@ ALTER TABLE `mantenimiento`
 -- Indices de la tabla `marca`
 --
 ALTER TABLE `marca`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `pModelo` (`pModelo`);
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indices de la tabla `modelo`
 --
 ALTER TABLE `modelo`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `pMarca` (`pMarca`);
 
 --
 -- Indices de la tabla `provincia`
 --
 ALTER TABLE `provincia`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `pLocalidad` (`pLocalidad`);
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indices de la tabla `respuesto`
@@ -448,7 +656,8 @@ ALTER TABLE `respuesto`
 ALTER TABLE `service`
   ADD PRIMARY KEY (`Id`),
   ADD KEY `pEmpleado` (`pEmpleado`),
-  ADD KEY `pTipoService` (`pTipoService`);
+  ADD KEY `pTipoService` (`pTipoService`),
+  ADD KEY `pVehiculo` (`pVehiculo`);
 
 --
 -- Indices de la tabla `servicerepuesto`
@@ -513,7 +722,8 @@ ALTER TABLE `vehiculo`
   ADD KEY `pTipoVehiculo` (`pTipoVehiculo`),
   ADD KEY `pArrastre` (`pArrastre`),
   ADD KEY `pMantenimiento` (`pMantenimiento`),
-  ADD KEY `pMarca` (`pMarca`);
+  ADD KEY `pMarca` (`pMarca`),
+  ADD KEY `pModelo` (`pModelo`);
 
 --
 -- Indices de la tabla `viajeconcretado`
@@ -530,8 +740,8 @@ ALTER TABLE `viajes`
   ADD KEY `pArrastre` (`pArrastre`),
   ADD KEY `pEmpleado` (`pEmpleado`),
   ADD KEY `pSucursalOrigen` (`pSucursalOrigen`),
-  ADD KEY `pCliente` (`pCliente`),
-  ADD KEY `pVehiculo` (`pVehiculo`);
+  ADD KEY `pVehiculo` (`pVehiculo`),
+  ADD KEY `pCliente` (`pCliente`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -541,7 +751,7 @@ ALTER TABLE `viajes`
 -- AUTO_INCREMENT de la tabla `arrastre`
 --
 ALTER TABLE `arrastre`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `cargascombustible`
@@ -550,22 +760,28 @@ ALTER TABLE `cargascombustible`
   MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `cliente`
+--
+ALTER TABLE `cliente`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `licencia`
 --
 ALTER TABLE `licencia`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
 --
 ALTER TABLE `localidad`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `mantenimiento`
@@ -577,61 +793,61 @@ ALTER TABLE `mantenimiento`
 -- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `modelo`
 --
 ALTER TABLE `modelo`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `respuesto`
 --
 ALTER TABLE `respuesto`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `service`
 --
 ALTER TABLE `service`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `servicerepuesto`
 --
 ALTER TABLE `servicerepuesto`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `sucursalorigen`
 --
 ALTER TABLE `sucursalorigen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipoempleado`
 --
 ALTER TABLE `tipoempleado`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tiposervice`
 --
 ALTER TABLE `tiposervice`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipousuario`
 --
 ALTER TABLE `tipousuario`
-  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tipovehiculo`
 --
 ALTER TABLE `tipovehiculo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ubicaciondiaria`
@@ -643,13 +859,13 @@ ALTER TABLE `ubicaciondiaria`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `vehiculo`
 --
 ALTER TABLE `vehiculo`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `viajeconcretado`
@@ -691,6 +907,12 @@ ALTER TABLE `empleado`
   ADD CONSTRAINT `empleado_ibfk_4` FOREIGN KEY (`pTipoEmpleado`) REFERENCES `tipoempleado` (`Id`) ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `localidad`
+--
+ALTER TABLE `localidad`
+  ADD CONSTRAINT `localidad_ibfk_1` FOREIGN KEY (`pProvincia`) REFERENCES `provincia` (`Id`) ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `mantenimiento`
 --
 ALTER TABLE `mantenimiento`
@@ -699,23 +921,18 @@ ALTER TABLE `mantenimiento`
   ADD CONSTRAINT `mantenimiento_ibfk_3` FOREIGN KEY (`pEmpleado`) REFERENCES `empleado` (`Id`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `marca`
+-- Filtros para la tabla `modelo`
 --
-ALTER TABLE `marca`
-  ADD CONSTRAINT `marca_ibfk_1` FOREIGN KEY (`pModelo`) REFERENCES `modelo` (`Id`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `provincia`
---
-ALTER TABLE `provincia`
-  ADD CONSTRAINT `provincia_ibfk_1` FOREIGN KEY (`pLocalidad`) REFERENCES `localidad` (`Id`) ON UPDATE CASCADE;
+ALTER TABLE `modelo`
+  ADD CONSTRAINT `modelo_ibfk_1` FOREIGN KEY (`pMarca`) REFERENCES `marca` (`Id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `service`
 --
 ALTER TABLE `service`
   ADD CONSTRAINT `service_ibfk_1` FOREIGN KEY (`pEmpleado`) REFERENCES `empleado` (`Id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `service_ibfk_2` FOREIGN KEY (`pTipoService`) REFERENCES `tiposervice` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `service_ibfk_2` FOREIGN KEY (`pTipoService`) REFERENCES `tiposervice` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `service_ibfk_3` FOREIGN KEY (`pVehiculo`) REFERENCES `vehiculo` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `servicerepuesto`
@@ -751,7 +968,8 @@ ALTER TABLE `vehiculo`
   ADD CONSTRAINT `vehiculo_ibfk_1` FOREIGN KEY (`pTipoVehiculo`) REFERENCES `tipovehiculo` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `vehiculo_ibfk_2` FOREIGN KEY (`pArrastre`) REFERENCES `arrastre` (`Id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `vehiculo_ibfk_3` FOREIGN KEY (`pMantenimiento`) REFERENCES `mantenimiento` (`Id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `vehiculo_ibfk_4` FOREIGN KEY (`pMarca`) REFERENCES `marca` (`Id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `vehiculo_ibfk_4` FOREIGN KEY (`pMarca`) REFERENCES `marca` (`Id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `vehiculo_ibfk_5` FOREIGN KEY (`pModelo`) REFERENCES `modelo` (`Id`);
 
 --
 -- Filtros para la tabla `viajeconcretado`
@@ -766,8 +984,8 @@ ALTER TABLE `viajes`
   ADD CONSTRAINT `viajes_ibfk_1` FOREIGN KEY (`pArrastre`) REFERENCES `arrastre` (`Id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `viajes_ibfk_2` FOREIGN KEY (`pEmpleado`) REFERENCES `empleado` (`Id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `viajes_ibfk_3` FOREIGN KEY (`pSucursalOrigen`) REFERENCES `sucursalorigen` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `viajes_ibfk_4` FOREIGN KEY (`pCliente`) REFERENCES `cliente` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `viajes_ibfk_5` FOREIGN KEY (`pVehiculo`) REFERENCES `vehiculo` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `viajes_ibfk_5` FOREIGN KEY (`pVehiculo`) REFERENCES `vehiculo` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `viajes_ibfk_6` FOREIGN KEY (`pCliente`) REFERENCES `cliente` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
