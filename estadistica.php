@@ -143,16 +143,16 @@
 
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
-      <h2>Section title</h2>
+      <h2>Tabla estadística</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
+              <th>ID</th>
+              <th>Patente Camion</th>
+              <th>Patente Arrastre</th>
+              <th>KM</th>
+              <th>Estado</th>
             </tr>
           </thead>
           <tbody>

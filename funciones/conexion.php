@@ -8,9 +8,14 @@ function conectarBaseDeDatos(){
     $clave = $configuracion["bd"]["password"];
     $bd = $configuracion["bd"]["basededatos"];
 
-    $conexion = new mysqli($host,$usuario,$clave, $bd);
+    $conexion = mysqli_connect($host,$usuario,$clave, $bd);
+
+    if (!$conexion){
+        die("Fallo la conexion: " . mysqli_connect_error());
+    }
 
     return $conexion;
+
 }
 
 
