@@ -1,5 +1,6 @@
 <?php
-include_once "conexion.php";
+include_once 'MysqlDatabase.php';
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -10,9 +11,11 @@ require '../recursos/PHPMailer/src/SMTP.php';
 
 function enviaMailConfirmacion($nombreUsuario,$emailUsuario,$passwordUsuario,$hashUsuario){
     //enviar mail confirmacion
-    $conexion = conectarBaseDeDatos();
+    $config = parse_ini_file('config.ini');
+    $database = new MysqlDatabase($config);
+
     $sql = "SELECT Email , Password from usuario where Id = 1 ";
-    $result = $conexion->query($sql);
+    $result = $database->executeQuery($sql);
     $mostrar = $result->fetch_assoc();
 
 

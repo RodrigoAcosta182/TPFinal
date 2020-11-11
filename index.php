@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
 
     <!-- Bootstrap core CSS -->
-<link href="/tpfinal/recursos/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/tpfinal/recursos/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -36,56 +36,7 @@
     <?php include "header.php"?>
 
 <main role="main">
-
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-          <img src="/tpfinal/recursos/img/camion2.jpg" class="embed-responsive" width="100%">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption text-left">
-            <h1>Garlopa Transfer</h1>
-            <p>Somos una empresa especializada en la prestación de servicios de transporte y distribución de todo tipo de materiales, con capacidad de operar a nivel nacional.</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-          <img src="/tpfinal/recursos/img/camiones.jpg" class="embed-responsive">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-            <div class="carousel-caption text-left">
-                <h1>Vanguardia</h1>
-                <p>Modernidad, confort y eficiencia en todos nuestros vehiculos.</p>
-            </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-          <img src="/tpfinal/recursos/img/carga.jpg" class="embed-responsive">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
-          <div class="container">
-              <div class="carousel-caption text-left">
-                  <h1>Confianza</h1>
-                  <p>Almacenamos, gestionamos y enviamos tus pedidos a donde quieras.</p>
-              </div>
-          </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-
+    <img src="/tpfinal/recursos/img/camionbanner.jpg" width="100%" class="img-fluid" alt="Responsive image">
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -95,7 +46,6 @@
       <!-- START THE FEATURETTES -->
         <div class="row featurette">
             <div class="container">
-                <h1 class="text-center featurette-heading" id="nosotros">Sobre nosotros</h1>
                 <div class="row featurette">
                   <div class="col-md-7 order-md-2">
                     <h3 class="featurette-heading">Garlopa Transfer</h3>

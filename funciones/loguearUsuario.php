@@ -5,7 +5,6 @@
  $config = parse_ini_file('config.ini');
  $database = new MysqlDatabase($config);
 
-
 if(isset($_POST['email']) && !empty($_POST['email']) AND isset($_POST['password']) && !empty($_POST['password'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -24,6 +23,5 @@ if ($cantidadDeFilas == 1) {
 } else {
     $_SESSION['mensaje'] = "Usuario y/o contraseña invalido";
     header("Location: ../login.php");
-
 }
 

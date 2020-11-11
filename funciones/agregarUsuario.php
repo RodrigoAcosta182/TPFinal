@@ -1,11 +1,9 @@
 <?php
 include 'enviarMailConfirmacion.php';
-include 'MysqlDatabase.php';
+include_once 'MysqlDatabase.php';
 
 $config = parse_ini_file('config.ini');
 $database = new MysqlDatabase($config);
-
-/*$conexion = conectarBaseDeDatos();*/
 
 if (isset($_POST['nombre']) && !empty($_POST['nombre']) AND isset($_POST['email'])) {
     $nombre = $_POST['nombre'] ;
@@ -21,13 +19,6 @@ $database->executeQuery($sql);
 
 
 enviaMailConfirmacion($nombre,$email,$password,$hash);
-
-/*if ($conexion->errno) {
-    echo "Ha ocurrido un error";
-    echo $conexion->errno . " - " . $conexion->error;
-} else {
-    header("Location: ../login.php");
-}*/
-
+header("Location: ../login.php");
 
 ?>
