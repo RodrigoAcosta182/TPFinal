@@ -1,6 +1,6 @@
 <?php
 require('../recursos/fpdf/fpdf.php');
-
+include_once 'MysqlDatabase.php';
 class PDF extends FPDF
 {
 // Cabecera de página
@@ -34,12 +34,11 @@ class PDF extends FPDF
     }
 }
 
-
-include 'conexion.php';
-$conexion = conectarBaseDeDatos();
+$config = parse_ini_file('config.ini');
+$database = new MysqlDatabase($config);
 $consulta = 'SELECT * FROM usuario';
 
-$resultado = $conexion->query($consulta);
+$resultado = $database->executeQuery($consulta);
 
 $pdf = new PDF();
 $pdf->AliasNbPages();

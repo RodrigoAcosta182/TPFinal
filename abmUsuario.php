@@ -1,3 +1,9 @@
+ <?php
+include_once 'funciones/MysqlDatabase.php';
+$config = parse_ini_file('funciones/config.ini');
+$database = new MysqlDatabase($config);
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,12 +64,11 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 <?php
-                include("funciones/conexion.php");
-                $conexion = conectarBaseDeDatos();
                 $sql = "select Id,Nombre, Apellido, Email,Password, Active from usuario";
 
-                $result = mysqli_query($conexion,$sql);
+                $result = $database->executeQuery($sql);
                 while($mostrar = mysqli_fetch_array($result)){
 
                             $datos=

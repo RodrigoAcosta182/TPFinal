@@ -1,8 +1,9 @@
 <?php
 
-include("conexion.php");
+include_once 'MysqlDatabase.php';
 
-$conexion = conectarBaseDeDatos();
+$config = parse_ini_file('config.ini');
+$database = new MysqlDatabase($config);
 
 //ELIMINAR
 
@@ -10,7 +11,7 @@ if (isset($_GET['eliminar'])) {
     $id = $_GET['eliminar'];
     echo $id;
     $sql = "delete from usuario where Id = '$id'";
-    $conexion->query($sql) or die($conexion->error());
+    $database->executeQuery($sql) or die();
 
     header("Location: ../abmUsuario.php");
 }

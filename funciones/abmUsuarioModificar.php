@@ -1,7 +1,9 @@
 <?php
 
-include("conexion.php");
-$conexion = conectarBaseDeDatos();
+include_once 'MysqlDatabase.php';
+
+$config = parse_ini_file('config.ini');
+$database = new MysqlDatabase($config);
 
 if (isset($_POST['idpersona'])) {
     $id = $_POST["idpersona"];
@@ -19,17 +21,9 @@ if (isset($_POST['idpersona'])) {
             ,Active = '$active'
             where id = '$id'
             ";
-     $conexion->query($sql);
+     $database->executeQuery($sql);
 
-    if ($conexion->error) {
-        echo "Ha ocurrido un error";
-        echo $conexion->error . " - " . $conexion->error;
-    } else {
-        echo "filas afectadas " . $conexion->affected_rows . "<br>";
-        $last_id = $conexion->insert_id;
-
-        header("Location: ../abmUsuario.php");
-    }
+     header("Location: ../abmUsuario.php");
 }
 echo $_POST["idpersona"];
 echo $_GET["idpersona"];

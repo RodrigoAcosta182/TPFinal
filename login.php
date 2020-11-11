@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="form-label-group">
-                    <input type="email" id="inputEmail" autocomplete="off" class="form-control" placeholder="Correo electronico" name="email"
+                    <input type="email" id="inputEmail"  class="form-control" placeholder="Correo electronico" name="email"
                            required autofocus>
                     <label for="inputEmail">Correo electrónico</label>
                 </div>
