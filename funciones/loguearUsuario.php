@@ -1,5 +1,5 @@
  <?php
-
+ session_start();
  include 'MysqlDatabase.php';
 
  $config = parse_ini_file('config.ini');
@@ -19,7 +19,7 @@ if(isset($_POST['email']) && !empty($_POST['email']) AND isset($_POST['password'
 
 if ($cantidadDeFilas == 1) {
     $_SESSION["logueado"] = 1;
-    $_SESSION["email"] = $_POST['email'];;
+    $_SESSION["email"] = $_POST['email'];
     header("Location: ../index.php");
 } else {
     $_SESSION['mensaje'] = "Usuario y/o contraseña invalido";
