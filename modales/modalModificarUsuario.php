@@ -10,33 +10,34 @@
             </div>
             <div class="modal-body">
                 <form action="/TPFinal/funciones/abmUsuarioModificar.php" method="post"
-                <label for=""></label>
-                <input type="text"hidden id="idpersona" name="idpersona" class="form-control input-sm">
-                <label for="">Nombre</label>
-                <input type="text" name="nombre" id="nombre" autocomplete="off" class="form-control input-sm">
-                <label for="">Apellido</label>
-                <input type="text" name="apellido" id="apellido" autocomplete="off" class="form-control input-sm">
-                <label for="">Email</label>
-                <input type="text" name="email" id="email" autocomplete="off" class="form-control input-sm">
-                <label for="">Password</label>
-                <input type="password" name="" id="password" autocomplete="off" class="form-control input-sm">
-                <label for="">Rol</label>
-                <select name="" id="" class="form-control input-sm">
-                    <option value="">Administrador</option>
-                    <option value="">Chofer</option>
-                    <option value="">Supervisor</option>
-                    <option value="">Encargado</option>
-                </select>
-                <label for="">Activo</label>
-                <select name="active" id="active" class="form-control input-sm">
-                    <option value="0">Desactivado</option>
-                    <option value="1">Activado</option>
-                </select>
+                    <label for=""></label>
+                    <input type="text"hidden id="idpersona" name="idpersona" class="form-control input-sm">
+                    <label for="">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" autocomplete="off" class="form-control input-sm">
+                    <label for="">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" autocomplete="off" class="form-control input-sm">
+                    <label for="">Email</label>
+                    <input type="text" name="email" id="email" autocomplete="off" class="form-control input-sm">
+                    <label for="">Password</label>
+                    <input type="password" name="" id="password" autocomplete="off" class="form-control input-sm">
+                    <label for="">Rol</label>
+                    <select name="" id="" class="form-control input-sm">
+                        <option value="">Administrador</option>
+                        <option value="">Chofer</option>
+                        <option value="">Supervisor</option>
+                        <option value="">Encargado</option>
+                    </select>
+                    <label for="">Activo</label>
+                    <select name="active" id="active" class="form-control input-sm">
+                        <option value="0">Desactivado</option>
+                        <option value="1">Activado</option>
+                    </select>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
+                    </div>
+                </form>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-warning" id="actualizadatos">Modificar</button>
-            </div>
-            </form>
         </div>
     </div>
 </div>

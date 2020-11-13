@@ -7,9 +7,6 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
     <title>Garlopa Index</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
-
     <!-- Bootstrap core CSS -->
     <link href="/tpfinal/recursos/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,7 +27,6 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="/tpfinal/recursos/css/carousel.css" rel="stylesheet">
   </head>
   <body>
     <?php include "header.php"?>
