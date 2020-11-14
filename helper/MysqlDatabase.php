@@ -2,16 +2,18 @@
 
 class MysqlDatabase
 {
+    private $config;
     private $connection;
 
-    public function __construct($host,$usuario,$password,$basededatos){
+    public function __construct(array $config)
+    {
+        $this->config = $config;
         $conexion = mysqli_connect(
-            $host,
-            $usuario,
-            $password,
-            $basededatos
+            $this->config["host"],
+            $this->config["usuario"],
+            $this->config["password"],
+            $this->config["basededatos"]
         );
-
         if (!$conexion){
             die("Fallo la conexion: " . mysqli_connect_error());
         }
@@ -24,7 +26,7 @@ class MysqlDatabase
     }
 
     public function execute($sql){
-        mysqli_query($this->connection, $sql);
+        return mysqli_query($this->connection, $sql);
     }
 
 }

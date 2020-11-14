@@ -75,7 +75,7 @@ $usuario = $permiso->getUsuarios();
                         <td><?php echo $datos["Descripcion"]?> </td>
                         <td><?php echo $datos["Active"]?> </td>
                         <td>
-                            <a href="Controller/modificarUsuario.php?modificar=<?php echo  $datos['Id']?>" class="btn btn-danger">Modificar</a>
+                            <a href="controller/modificarUsuario.php?modificar=<?php echo  $datos['Id']?>" class="btn btn-danger">Modificar</a>
                             <a href="funciones/abmUsuarioEliminar.php?eliminar=<?php echo  $datos[0]?>" class="btn btn-danger" onclick="return confirm('DESEA ELIMINAR EL USUARIO DE MANERA VIOLENTA?')">Eliminar</a>
                         </td>
 
